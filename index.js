@@ -13,14 +13,15 @@
         const brightness_now = document.querySelector('.brightness_value');
 
 
-        const setBrightness = (angle) => {
-            if (angle > 0) {
+        const setBrightness = (angle, values) => {
+            if (angle > 5) {
                 brightness = Math.max(brightness - brightnessStep, minBrightness);
-            } else if (angle < 0) {
+            } else if (angle < -5) {
                 brightness = Math.min(brightness + brightnessStep, maxBrightness);
             }
             image.style.filter = `brightness(${brightness}%)`;
             brightness_now.innerHTML = `${brightness}%`;
+            values.textContent = `Яркость: ${brightness} %`;
         };
 
         const minScale = container.clientWidth / image.clientWidth;
@@ -77,7 +78,7 @@
                 let distance = getDistance(event.touches);
                 let delta = distance / initialDistance;
                 initialDistance = distance;
-                setBrightness(angle);
+                setBrightness(angle, document.getElementById('brightless_name'));
                 setScale(delta);
             } else if (event.touches.length == 1 && startX) {
                 let x = event.touches[0].clientX;
