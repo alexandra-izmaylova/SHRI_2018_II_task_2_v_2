@@ -588,7 +588,7 @@ footer p {
 	color: #FFFFFF;
 }
 
-/* .brightless {
+.brightless {
 	margin-top:10px;
 	display: flex;
 	flex-direction: row;
@@ -598,7 +598,7 @@ footer p {
 	margin-top:10px;
 	display: flex;
 	flex-direction: row;
-} */
+}
 
 .user_tools {
 	display: flex;

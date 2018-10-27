@@ -30,7 +30,7 @@ window.onload = function () {
             scale = Math.max(scale * delta, minScale);
         }
         image.style.transform = "scale(" + scale + ")";
-        scale_now.textContent = "\u041C\u0430\u0441\u0448\u0442\u0430\u0431: " + scale + " %";
+        scale_now.textContent = "\u041C\u0430\u0441\u0448\u0442\u0430\u0431: " + scale;
     };
     var left = 0;
     var translate = function (delta) {
